@@ -176,6 +176,7 @@ if (!file.exists(glue::glue("output/analysis"))) {
 
 # Long
 writexl::write_xlsx(overview_list, "output/analysis/RHQA_Overview_Analysis.xlsx", format_headers = F) # Overview
+writexl::write_xlsx(HMIS_Verification_list, "output/analysis/RHQA_Verification_Analysis.xlsx", format_headers = F) # Verification
 writexl::write_xlsx(a1_t1_list, "output/analysis/a1_t1_analysis.xlsx", format_headers = F) # A1_T1
 writexl::write_xlsx(a1_t2_list, "output/analysis/a1_t2_analysis.xlsx", format_headers = F) # A1_T2
 writexl::write_xlsx(a1_t3_list, "output/analysis/a1_t3_analysis.xlsx", format_headers = F) # A1_T3
