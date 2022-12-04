@@ -26,6 +26,10 @@ a2_t1_ap <- readxl::read_excel("input/analysis_plan/Analysis Plan_A2_T1.xlsx")
 a2_t2_ap <- readxl::read_excel("input/analysis_plan/Analysis Plan_A2_T2.xlsx")
 
 
+# Manual Analysis ----------------------------------------------------------------------------------
+# file.edit("R/manual_calculations.R")
+source("R/manual_calculations.R")
+
 # Analysis -----------------------------------------------------------------------------------------
 ## A1_T1
 a1_t1_analysis <- rbind(
@@ -120,10 +124,6 @@ a2_t2_analysis <- analysis_func(df = a2_t2_data, ap = a2_t2_ap, multi_response_s
   arrange(Disaggregation)
 a1_t3_analysis <- a1_t3_analysis %>% 
   filter(Denominator != 0)
-
-# Manual Analysis ----------------------------------------------------------------------------------
-# file.edit("R/manual_calculations.R")
-source("R/manual_calculations.R")
 
 # Export lists -------------------------------------------------------------------------------------
 overview_list <- list(
